@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] Strike Defender</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CyberMLServiceSite.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+	<link href="~/css/alert.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <header>
+        <!-- 100% privacy-first analytics -->
+        <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+        <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <div class="logo-container">
+                        <img src="~/images/Logo.png" alt="Company Logo" class="logo-img" />
+                    </div>
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Strike Defender</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Solutions">Services</a>
+                        </li>
+@*                         <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                        </li>    *@
+                        @if (User.IsInRole("admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="Requests">Requests</a>
+                            </li> 
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="Roles">Roles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="Users">Users</a>
+                            </li>
+                         }
+                    </ul>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-cyber dropdown-toggle" type="button" id="authDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user-shield me-2"></i>Account
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="authDropdown">
+                             @if (!User.Identity.IsAuthenticated)
+                            {
+                                <li><a class="dropdown-item" asp-controller="Account" asp-action="Login"><i class="fas fa-sign-in-alt me-2"></i>Login</a></li>
+                                <li><a class="dropdown-item" asp-controller="Account" asp-action="Register"><i class="fas fa-user-plus me-2"></i>Register</a></li>
+                            }
+                            else
+                            {
+
+                                <button class="dropdown-item" type="button" onclick="location.href='@Url.Action("Profile", "Account")'">My Profile</button>
+                                <button class="dropdown-item" type="button" onclick="location.href='@Url.Action("Logout", "Account")'">Logout</button>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    let loginSuccessMessage = '@TempData["LoginSuccess"]';
+
+                    if (loginSuccessMessage && sessionStorage.getItem("hideLoginAlert") !== "true") {
+                        Swal.fire({
+                            title: "Success!",
+                            text: loginSuccessMessage,
+                            icon: "success",
+                            confirmButtonText: 'OK',
+                            customClass: {
+                                popup: 'swal-custom-popup',
+                                title: 'swal-custom-title',
+                                confirmButton: 'swal-custom-button'
+                            }
+                        }).then(() => {
+                            sessionStorage.setItem("hideLoginAlert", "true");
+                        });
+                    }
+
+                @if (TempData["LoginSuccess"] != null)
+                {
+                    <text>
+                        @TempData.Remove("LoginSuccess");
+                    </text>
+                }
+                            });
+            </script>
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    &copy; 2025 - CyberGuard AI - <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-decoration-none">Privacy Policy</a>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-decoration-none me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-decoration-none me-3"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-decoration-none me-3"><i class="fab fa-github"></i></a>
+                    <a href="#" class="text-decoration-none"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let loginSuccessMessage = '@TempData["LoginSuccess"]';
+
+            if (loginSuccessMessage && sessionStorage.getItem("hideLoginAlert") !== "true") {
+                Swal.fire({
+                    title: "Success!",
+                    text: loginSuccessMessage,
+                    icon: "success",
+                    confirmButtonText: 'OK',
+                    customClass: {
+                        popup: 'swal-custom-popup',
+                        title: 'swal-custom-title',
+                        confirmButton: 'swal-custom-button'
+                    }
+                }).then(() => {
+                    sessionStorage.setItem("hideLoginAlert", "true");
+                });
+            }
+
+        @if (TempData["LoginSuccess"] != null)
+        {
+            <text>
+                @TempData.Remove("LoginSuccess");
+            </text>
+        }
+            });
+    </script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

@@ -1,0 +1,157 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+/*Layout */
+
+:root {
+    --cyber-dark: #0a192f;
+    --cyber-primary: #64ffda;
+    --cyber-secondary: #112240;
+    --cyber-light: #ccd6f6;
+    --cyber-accent: #1e90ff;
+}
+
+body {
+    background-color: var(--cyber-dark);
+    color: var(--cyber-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    background-color: var(--cyber-secondary) !important;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.navbar-brand, .nav-link {
+    color: var(--cyber-light) !important;
+}
+
+    .nav-link:hover {
+        color: var(--cyber-primary) !important;
+    }
+
+.btn-outline-cyber {
+    color: var(--cyber-primary);
+    border-color: var(--cyber-primary);
+}
+
+    .btn-outline-cyber:hover {
+        background-color: var(--cyber-primary);
+        color: var(--cyber-dark);
+    }
+
+.feature-card {
+    background-color: var(--cyber-secondary);
+    border-radius: 8px;
+    border-left: 3px solid var(--cyber-primary);
+    transition: transform 0.3s ease;
+}
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+.logo-container {
+    width: 50px; /* يمكن تعديل الحجم حسب احتياجك */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    background-color: transparent; /* إزالة لون الخلفية */
+    border-radius: 50%; /* إذا كنت تريد شكل دائري */
+    overflow: hidden; /* لإخفاء الأجزاء الزائدة من الصورة */
+}
+
+.logo-img {
+    width: 100%; /* لتعبئة المساحة المتاحة */
+    height: auto;
+    object-fit: contain; /* للحفاظ على نسب الصورة */
+    transition: transform 0.3s ease; /* تأثير حركي عند التحويم */
+    border-radius: 50%;
+}
+
+.logo-img:hover {
+    transform: scale(1.1); /* تكبير بسيط عند التحويم */
+}
+/* تأثير إضاءة عند التحويم */
+.logo-container:hover {
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.5);
+}
+
+    /* تدوير اللوجو عند التحويم */
+    .logo-container:hover .logo-img {
+        transform: rotate(15deg) scale(1.1);
+    }
+
+/* تنسيق القائمة المنسدلة */
+.dropdown-visible {
+    color: white !important;
+}
+
+    .dropdown-visible option {
+        background: var(--cyber-secondary) !important;
+        color: white !important;
+        padding: 10px !important;
+    }
+
+    .dropdown-visible:focus {
+        border-color: var(--cyber-primary) !important;
+        box-shadow: 0 0 0 0.25rem rgba(100, 255, 218, 0.25) !important;
+    }
+
+    /* عند فتح القائمة */
+    .dropdown-visible option:hover {
+        background-color: var(--cyber-primary) !important;
+        color: var(--cyber-dark) !important;
+    }
+/* Team Member Cards */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+/* Contact Icons */
+.contact-icon {
+    transition: all 0.3s ease;
+}
+
+.contact-method:hover .contact-icon {
+    background-color: var(--cyber-light) !important;
+    color: var(--cyber-dark) !important;
+}
+
+/* Form Styling */
+.form-control:focus {
+    border-color: var(--cyber-primary);
+    box-shadow: 0 0 0 0.25rem rgba(100, 255, 218, 0.25);
+}
+
+footer {
+    background-color: var(--cyber-secondary) !important;
+    border-top: 1px solid rgba(100, 255, 218, 0.1) !important;
+}
+

@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Contact Us";
+    Layout = "_Layout";
+}
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="feature-card p-4 h-100">
+                <h2 class="fw-bold mb-4">Get in <span class="text-cyber-primary">Touch</span></h2>
+                <p class="lead mb-4">We'd love to hear from you about your cybersecurity needs</p>
+
+                <div class="contact-method mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="contact-icon bg-cyber-primary text-dark rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">Email Us</h5>
+                            <a href="mailto:security@cyberguard.com" class="text-decoration-none">security@cyberguard.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-method mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="contact-icon bg-cyber-primary text-dark rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">Call Us</h5>
+                            <a href="tel:+201234567890" class="text-decoration-none">+20 123 456 7890</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-method mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="contact-icon bg-cyber-primary text-dark rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">LinkedIn</h5>
+                            <a href="https://linkedin.com/company/cyberguard" target="_blank" class="text-decoration-none">CyberGuard AI</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="feature-card p-4 h-100">
+                <h3 class="fw-bold mb-4">Send Us a Message</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control bg-cyber-secondary border-cyber-primary" id="name" required placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control bg-cyber-secondary  border-cyber-primary" id="email" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" class="form-control bg-cyber-secondary  border-cyber-primary" id="subject" required placeholder="Enter your Subject" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control bg-cyber-secondary border-cyber-primary" id="message" rows="5" required placeholder="Enter your Message" />></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-cyber-primary px-4 py-2 rounded-pill"
+                        style=" color:white">
+                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

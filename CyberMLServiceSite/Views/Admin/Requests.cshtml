@@ -1,0 +1,102 @@
+﻿@model IEnumerable<ServiceRequest>
+@{
+    ViewData["Title"] = "Service Requests";
+    Layout = "_Layout";
+}
+
+<div class="container-fluid py-4">
+    <div class="card shadow border-cyber-primary">
+        <div class="card-header bg-cyber-secondary text-cyber-light">
+            <div class="d-flex justify-content-between align-items-center">
+                <h4 class="mb-0"><i class="fas fa-list-check me-2 text-cyber-primary"></i>Service Requests</h4>
+                <a asp-action="ExportToExcel" class="btn btn-cyber-primary">
+                    <i class="fas fa-file-excel me-2"></i>Export to Excel
+                </a>
+            </div>
+        </div>
+
+        <div class="card-body bg-cyber-dark">
+            <div class="table-responsive">
+                <table class="table table-dark table-hover">
+                    <thead class="bg-cyber-secondary text-cyber-primary">
+                        <tr>
+                            <th class="border-cyber-primary">ID</th>
+                            <th class="border-cyber-primary">User</th>
+                            <th class="border-cyber-primary">Service Type</th>
+                            <th class="border-cyber-primary">Request Date</th>
+                            <th class="border-cyber-primary">Status</th>
+                            <th class="border-cyber-primary">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var request in Model)
+                        {
+                            <tr class="bg-cyber-secondary text-cyber-light">
+                                <td class="border-cyber-dark">@request.Id</td>
+                                <td class="border-cyber-dark">@request.Name</td>
+                                <td class="border-cyber-dark">@request.ServiceType</td>
+                                <td class="border-cyber-dark">@request.RequestDate.ToString("g")</td>
+                                <td class="border-cyber-dark">
+                                    <span class="badge @GetStatusBadgeClass(request.Status)">
+                                        @request.Status
+                                    </span>
+                                </td>
+                                <td class="border-cyber-dark">
+                                    <button class="btn btn-sm btn-outline-cyber-primary" data-bs-toggle="modal"
+                                            data-bs-target="#detailsModal"
+                                            onclick="showDetails('@request.AdditionalNotes')">
+                                        <i class="fas fa-eye"></i> View
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Details -->
+<div class="modal fade" id="detailsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-cyber-secondary text-cyber-light border-cyber-primary">
+            <div class="modal-header bg-cyber-dark border-cyber-primary">
+                <h5 class="modal-title text-cyber-primary"><i class="fas fa-info-circle me-2"></i>Request Details</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-cyber-secondary" id="detailsContent">
+                <!-- Details will be loaded here -->
+            </div>
+            <div class="modal-footer bg-cyber-dark border-cyber-primary">
+                <button type="button" class="btn btn-cyber-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-2"></i>Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function showDetails(notes) {
+            document.getElementById('detailsContent').innerHTML =
+                `<div class="p-3 bg-cyber-dark rounded">
+                    <h6 class="text-cyber-primary mb-3"><i class="fas fa-sticky-note me-2"></i>Additional Notes:</h6>
+                    <p class="text-cyber-light">${notes || '<span class="text-muted">No additional notes provided.</span>'}</p>
+                </div>`;
+        }
+    </script>
+}
+
+@functions {
+    string GetStatusBadgeClass(string status)
+    {
+        return status switch
+        {
+            "Approved" => "bg-success text-white",
+            "Rejected" => "bg-danger text-white",
+            _ => "bg-warning text-cyber-dark"
+        };
+    }
+}

@@ -1,0 +1,65 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_Layout";
+}
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="feature-card p-4 p-lg-5 shadow-lg">
+                <h2 class="fw-bold mb-4 text-center"><i class="fas fa-sign-in-alt text-cyber-primary me-2"></i>Secure Login</h2>
+
+                <form asp-action="Login" method="post">
+                    <div class="mb-4">
+                        <label asp-for="username" class="form-label fw-bold"><i class="fas fa-envelope me-2 text-cyber-primary"></i>username</label>
+                        <input asp-for="username" class="form-control bg-cyber-light" placeholder="Enter your username">
+                        <span asp-validation-for="username" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-4">
+                        <label asp-for="password" class="form-label fw-bold"><i class="fas fa-lock me-2 text-cyber-primary"></i>password</label>
+                        <input asp-for="password" type="password" class="form-control bg-cyber-light" placeholder="Enter your password">
+                        <span asp-validation-for="password" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input asp-for="RememberMe" type="checkbox" class="form-check-input">
+                        <label class="form-check-label" asp-for="RememberMe">Remember me</label>
+                    </div>
+                    <div class="mb-4">
+                        @if (ViewData.ModelState.ErrorCount > 0)
+                        {
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                                    {
+                                        <li>@error.ErrorMessage</li>
+                                    }
+                                </ul>
+                            </div>
+                        }
+
+                    </div>
+
+                    <div class="d-grid mt-4">
+                        <button type="submit" class="btn btn-cyber-primary rounded-pill py-2" style=" color:white">
+                            <i class="fas fa-sign-in-alt me-2"></i>Login
+                        </button>
+                    </div>
+                </form>
+
+                <div class="text-center mt-4">
+                    <p class="mb-1"><a href="#" class="text-cyber-primary">Forgot password?</a></p>
+                    <p class="mb-0">Don't have an account? <a asp-action="Register" class="text-cyber-primary">Register</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

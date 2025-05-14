@@ -1,0 +1,31 @@
+﻿@model List<RoleViewModel>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary">Roles Management</h2>
+        <a asp-action="AddRole" class="btn btn-primary">Add New Role</a>
+    </div>
+
+    <div class="card">
+        <div class="card-header bg-light">
+            <h4 class="mb-0">Existing Roles</h4>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-hover mb-0">
+                <thead class="bg-light">
+                    <tr>
+                        <th class="border-top-0">Role Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var role in Model)
+                    {
+                        <tr>
+                            <td>@role.RoleName</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

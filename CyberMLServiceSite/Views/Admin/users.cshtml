@@ -1,0 +1,157 @@
+﻿@model IEnumerable<UserViewModel>
+
+@{
+    ViewData["Title"] = "Users List";
+}
+
+<div class="users-container">
+    <h2 class="users-header">Registered Users</h2>
+
+    <div class="users-table-container">
+        <table class="users-table">
+            <thead>
+                <tr class="users-table-header">
+                    <th class="username-col">Username</th>
+                    <th class="email-col">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr class="user-row">
+                        <td>@user.UserName</td>
+                        <td>@user.Email</td>
+                      
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style>
+    /* Base styles */
+    .users-container {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .users-header {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 25px;
+        font-weight: 600;
+    }
+
+    /* Table styles */
+    .users-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .users-table-header {
+        background-color: #3498db; /* Change to your primary color */
+        color: white;
+    }
+
+    .users-table-header th {
+        padding: 12px 15px;
+        text-align: left;
+    }
+
+    .user-row {
+        border-bottom: 1px solid #e0e0e0;
+        transition: background-color 0.2s;
+    }
+
+    .user-row:hover {
+        background-color: #f5f5f5;
+    }
+
+    .user-row td {
+        padding: 12px 15px;
+        color: #333;
+    }
+
+    /* Column widths */
+    .username-col { width: 25%; }
+    .email-col { width: 45%; }
+    .actions-col { width: 30%; }
+
+    /* Action buttons */
+    .user-actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    .action-btn {
+        padding: 6px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.2s;
+    }
+
+    .action-btn i {
+        margin-right: 5px;
+    }
+
+    .edit-btn {
+        background-color: #f39c12; /* Orange */
+        color: white;
+    }
+
+    .edit-btn:hover {
+        background-color: #e67e22;
+    }
+
+    .details-btn {
+        background-color: #2ecc71; /* Green */
+        color: white;
+    }
+
+    .details-btn:hover {
+        background-color: #27ae60;
+    }
+
+    /* Responsive adjustments */
+    @@media (max-width: 768px) {
+        .users-table-header {
+            display: none;
+        }
+
+        .user-row {
+            display: block;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        .user-row td {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            border: none;
+        }
+
+        .user-row td::before {
+            content: attr(data-label);
+            font-weight: bold;
+            display: inline-block;
+            width: 120px;
+        }
+
+        .user-actions {
+            justify-content: flex-start;
+            margin-top: 10px;
+        }
+    }
+</style>

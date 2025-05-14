@@ -1,0 +1,174 @@
+﻿@model CyberMLServiceSite.ViewModel.ServiceRequestViewModel
+@{
+    ViewData["Title"] = "Service Request";
+    Layout = "_Layout";
+}
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="feature-card p-4 p-lg-5 shadow-lg">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold mb-3"><i class="fas fa-file-contract me-2 text-cyber-primary"></i>Service Request Form</h2>
+                    <p class="text-cyber-light">Complete this form to request our cybersecurity services</p>
+                </div>
+
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success">
+                        @TempData["SuccessMessage"]
+                    </div>
+                }
+
+                <form asp-action="RequestForm" method="post" class="needs-validation" novalidate>
+                    <div class="row g-3">
+                        <!-- Name Field -->
+                        <div class="col-md-6 mb-4">
+                            <label asp-for="Name" class="form-label fw-bold text-cyber-light">
+                                <i class="fas fa-user me-2 text-cyber-primary"></i>Full Name
+                            </label>
+                            <input asp-for="Name" class="form-control bg-cyber-secondary text-cyber-light border-cyber-primary" required placeholder="Enter your name">
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="col-md-6 mb-4">
+                            <label asp-for="Email" class="form-label fw-bold text-cyber-light">
+                                <i class="fas fa-envelope me-2 text-cyber-primary"></i>Email Address
+                            </label>
+                            <input asp-for="Email" type="email" class="form-control bg-cyber-secondary text-cyber-light border-cyber-primary" required placeholder="your.email@example.com">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        <!-- Position Field -->
+                        <div class="col-12 mb-4">
+                            <label asp-for="Position" class="form-label fw-bold text-cyber-light">
+                                <i class="fas fa-briefcase me-2 text-cyber-primary"></i>Position
+                            </label>
+                            <select asp-for="Position" class="form-select bg-cyber-secondary text-cyber-light border-cyber-primary" required>
+                                <option value="" selected disabled>Select your position</option>
+                                <option value="CEO">CEO</option>
+                                <option value="CTO">CTO</option>
+                                <option value="IT Manager">IT Manager</option>
+                                <option value="Software Engineer">Software Engineer</option>
+                                <option value="Data Analyst">Data Analyst</option>
+                                <option value="Cybersecurity Specialist">Cybersecurity Specialist</option>
+                                <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+                                <option value="HR Manager">HR Manager</option>
+                                <option value="Marketing Manager">Marketing Manager</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span asp-validation-for="Position" class="text-danger"></span>
+                        </div>
+
+                        <!-- Services Needed -->
+                        <div class="col-12 mb-4">
+                            <label class="form-label fw-bold text-cyber-light">
+                                <i class="fas fa-shield-alt me-2 text-cyber-primary"></i>Services Needed
+                            </label>
+
+                            <!-- Security Packages -->
+                            <div class="mb-4">
+                                <h6 class="text-cyber-primary mb-3">Security Packages:</h6>
+
+                                <!-- Full Protection Bundle -->
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input package-radio" type="radio" name="ServicesRequested" id="ServicesRequested" value="Full Protection Bundle">
+                                    <label class="form-check-label text-cyber-light" for="fullProtection">
+                                        <strong>Full Protection Bundle ($8000)</strong>
+                                        <div class="package-details ps-4 mt-2 small text-muted">
+                                            <div>Includes: Attack AI + Defense AI + Pentest</div>
+                                            <div>Continuous updates & threat database</div>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <!-- Smart Defense Package -->
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input package-radio" type="radio" name="ServicesRequested" id="smartDefense" value="Smart Defense Package">
+                                    <label class="form-check-label text-cyber-light" for="smartDefense">
+                                        <strong>Smart Defense Package ($5000)</strong>
+                                        <div class="package-details ps-4 mt-2 small text-muted">
+                                            <div>Includes: Defense AI Model</div>
+                                            <div>Trained attack database</div>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <!-- AI Patches -->
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input package-radio" type="radio" name="ServicesRequested" id="aiPatches" value="AI-Generated Attack Patches">
+                                    <label class="form-check-label text-cyber-light" for="aiPatches">
+                                        <strong>AI-Generated Attack Patches ($500/patch)</strong>
+                                        <div class="package-details ps-4 mt-2 small text-muted">
+                                            <div>Regular threat updates</div>
+                                            <div>Easy integration</div>
+                                        </div>
+                                    </label>
+                                </div>
+
+                       
+
+                        <!-- Additional Notes -->
+                        <div class="col-12 mb-4">
+                            <label asp-for="AdditionalNotes" class="form-label fw-bold text-cyber-light">
+                                <i class="fas fa-comment me-2 text-cyber-primary"></i>Additional Notes
+                            </label>
+                            <textarea asp-for="AdditionalNotes" class="form-control bg-cyber-secondary text-cyber-light border-cyber-primary" rows="4" placeholder="Describe your security needs in detail"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="col-12 text-center mt-4"  style="background: cadetblue;">
+                            <button type="submit" class="btn btn-cyber-primary px-4 py-2 rounded-pill">
+                                <i class="fas fa-paper-plane me-2"></i>Submit Request
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        // Form validation script
+        (function () {
+            'use strict'
+
+            var forms = document.querySelectorAll('.needs-validation')
+
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })();
+
+                // Enable/disable checkboxes based on package selection
+                document.querySelectorAll('.package-radio').forEach(radio => {
+                    radio.addEventListener('change', function() {
+                        const checkboxes = document.querySelectorAll('.service-checkbox');
+
+                        if (this.id === 'customPackage') {
+                            checkboxes.forEach(cb => cb.disabled = false);
+                        } else {
+                            checkboxes.forEach(cb => {
+                                cb.disabled = true;
+                                cb.checked = false;
+                            });
+                        }
+                    });
+                });
+    </script>
+}
