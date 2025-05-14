@@ -1,30 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Administrator\\source\\repos\\CyberMLServiceSite\\",
+  "WorkspaceRootPath": "D:\\Projects\\CyberMLServiceSite\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|c:\\users\\administrator\\source\\repos\\cybermlservicesite\\cybermlservicesite\\views\\home\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|solutionrelative:cybermlservicesite\\views\\home\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|d:\\projects\\cybermlservicesite\\cybermlservicesite\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|solutionrelative:cybermlservicesite\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|c:\\users\\administrator\\source\\repos\\cybermlservicesite\\cybermlservicesite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|solutionrelative:cybermlservicesite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|d:\\projects\\cybermlservicesite\\cybermlservicesite\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|solutionrelative:cybermlservicesite\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|c:\\users\\administrator\\source\\repos\\cybermlservicesite\\cybermlservicesite\\viewmodel\\servicerequestviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|solutionrelative:cybermlservicesite\\viewmodel\\servicerequestviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|d:\\projects\\cybermlservicesite\\cybermlservicesite\\.dockerignore||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|solutionrelative:cybermlservicesite\\.dockerignore||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|c:\\users\\administrator\\source\\repos\\cybermlservicesite\\cybermlservicesite\\controllers\\admincontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|solutionrelative:cybermlservicesite\\controllers\\admincontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|d:\\projects\\cybermlservicesite\\cybermlservicesite\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|solutionrelative:cybermlservicesite\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|c:\\users\\administrator\\source\\repos\\cybermlservicesite\\cybermlservicesite\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|solutionrelative:cybermlservicesite\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|c:\\users\\administrator\\source\\repos\\cybermlservicesite\\cybermlservicesite\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|solutionrelative:cybermlservicesite\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|d:\\projects\\cybermlservicesite\\cybermlservicesite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA5566AC-3E8F-4426-A0AE-E720FDD6B65C}|CyberMLServiceSite\\CyberMLServiceSite.csproj|solutionrelative:cybermlservicesite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,8 +30,20 @@
       "DocumentGroups": [
         {
           "DockedHeight": 594,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
@@ -46,76 +54,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\CyberMLServiceSite\\CyberMLServiceSite\\Views\\Home\\Form.cshtml",
-              "RelativeDocumentMoniker": "CyberMLServiceSite\\Views\\Home\\Form.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\CyberMLServiceSite\\CyberMLServiceSite\\Views\\Home\\Form.cshtml",
-              "RelativeToolTip": "CyberMLServiceSite\\Views\\Home\\Form.cshtml",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFgAAABoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-01T22:56:09.532Z",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\CyberMLServiceSite\\CyberMLServiceSite\\Program.cs",
+              "RelativeDocumentMoniker": "CyberMLServiceSite\\Program.cs",
+              "ToolTip": "D:\\Projects\\CyberMLServiceSite\\CyberMLServiceSite\\Program.cs",
+              "RelativeToolTip": "CyberMLServiceSite\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T16:15:09.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projects\\CyberMLServiceSite\\CyberMLServiceSite\\appsettings.json",
+              "RelativeDocumentMoniker": "CyberMLServiceSite\\appsettings.json",
+              "ToolTip": "D:\\Projects\\CyberMLServiceSite\\CyberMLServiceSite\\appsettings.json*",
+              "RelativeToolTip": "CyberMLServiceSite\\appsettings.json*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-14T16:06:22.094Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "serviceRequestViewmodel.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\CyberMLServiceSite\\CyberMLServiceSite\\ViewModel\\serviceRequestViewmodel.cs",
-              "RelativeDocumentMoniker": "CyberMLServiceSite\\ViewModel\\serviceRequestViewmodel.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\CyberMLServiceSite\\CyberMLServiceSite\\ViewModel\\serviceRequestViewmodel.cs",
-              "RelativeToolTip": "CyberMLServiceSite\\ViewModel\\serviceRequestViewmodel.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBEAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T22:55:29.173Z"
+              "Title": ".dockerignore",
+              "DocumentMoniker": "D:\\Projects\\CyberMLServiceSite\\CyberMLServiceSite\\.dockerignore",
+              "RelativeDocumentMoniker": "CyberMLServiceSite\\.dockerignore",
+              "ToolTip": "D:\\Projects\\CyberMLServiceSite\\CyberMLServiceSite\\.dockerignore",
+              "RelativeToolTip": "CyberMLServiceSite\\.dockerignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-14T15:16:25.08Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\CyberMLServiceSite\\CyberMLServiceSite\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "CyberMLServiceSite\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\CyberMLServiceSite\\CyberMLServiceSite\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "CyberMLServiceSite\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAD8AAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-01T15:43:29.097Z"
+              "DocumentIndex": 0,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "D:\\Projects\\CyberMLServiceSite\\CyberMLServiceSite\\docker-compose.yml",
+              "RelativeDocumentMoniker": "CyberMLServiceSite\\docker-compose.yml",
+              "ToolTip": "D:\\Projects\\CyberMLServiceSite\\CyberMLServiceSite\\docker-compose.yml",
+              "RelativeToolTip": "CyberMLServiceSite\\docker-compose.yml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-05-14T13:05:57.85Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\CyberMLServiceSite\\CyberMLServiceSite\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "CyberMLServiceSite\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\CyberMLServiceSite\\CyberMLServiceSite\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "CyberMLServiceSite\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAwwCcAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T15:41:05.485Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "users.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\CyberMLServiceSite\\CyberMLServiceSite\\Views\\Admin\\users.cshtml",
-              "RelativeDocumentMoniker": "CyberMLServiceSite\\Views\\Admin\\users.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\CyberMLServiceSite\\CyberMLServiceSite\\Views\\Admin\\users.cshtml",
-              "RelativeToolTip": "CyberMLServiceSite\\Views\\Admin\\users.cshtml",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAAAA4AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-01T15:40:01.473Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdminController .cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\CyberMLServiceSite\\CyberMLServiceSite\\Controllers\\AdminController .cs",
-              "RelativeDocumentMoniker": "CyberMLServiceSite\\Controllers\\AdminController .cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\CyberMLServiceSite\\CyberMLServiceSite\\Controllers\\AdminController .cs",
-              "RelativeToolTip": "CyberMLServiceSite\\Controllers\\AdminController .cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAA1wBsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T15:32:23.387Z"
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\Projects\\CyberMLServiceSite\\CyberMLServiceSite\\Dockerfile",
+              "RelativeDocumentMoniker": "CyberMLServiceSite\\Dockerfile",
+              "ToolTip": "D:\\Projects\\CyberMLServiceSite\\CyberMLServiceSite\\Dockerfile",
+              "RelativeToolTip": "CyberMLServiceSite\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-14T13:06:11.565Z",
+              "EditorCaption": ""
             }
           ]
         },

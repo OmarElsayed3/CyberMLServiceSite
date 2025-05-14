@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CyberMLServiceSite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ee274b7a7ea6c5bc7499fc416e2bfc436a425c6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8da47c19ff6151607ccb94164fcb54950a419b8e")]
 [assembly: System.Reflection.AssemblyProductAttribute("CyberMLServiceSite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CyberMLServiceSite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -22,7 +22,7 @@ namespace CyberMLServiceSite.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("CyberMLServiceSite.Models.Applicationuser", b =>
+            modelBuilder.Entity("CyberMLServiceSite.Core.Models.Applicationuser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -87,7 +87,7 @@ namespace CyberMLServiceSite.Data.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("CyberMLServiceSite.Models.ClientInfo", b =>
+            modelBuilder.Entity("CyberMLServiceSite.Core.Models.ClientInfo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -116,7 +116,7 @@ namespace CyberMLServiceSite.Data.Migrations
                     b.ToTable("ClientInfos");
                 });
 
-            modelBuilder.Entity("CyberMLServiceSite.Models.ServiceRequest", b =>
+            modelBuilder.Entity("CyberMLServiceSite.Core.Models.ServiceRequest", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -299,7 +299,7 @@ namespace CyberMLServiceSite.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("CyberMLServiceSite.Models.Applicationuser", null)
+                    b.HasOne("CyberMLServiceSite.Core.Models.Applicationuser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -308,7 +308,7 @@ namespace CyberMLServiceSite.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("CyberMLServiceSite.Models.Applicationuser", null)
+                    b.HasOne("CyberMLServiceSite.Core.Models.Applicationuser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -323,7 +323,7 @@ namespace CyberMLServiceSite.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CyberMLServiceSite.Models.Applicationuser", null)
+                    b.HasOne("CyberMLServiceSite.Core.Models.Applicationuser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -332,7 +332,7 @@ namespace CyberMLServiceSite.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("CyberMLServiceSite.Models.Applicationuser", null)
+                    b.HasOne("CyberMLServiceSite.Core.Models.Applicationuser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
